@@ -85,6 +85,7 @@ public class RestAssurdTest {
                 get(baseUrl.get(TIMEZONES)).
                 then().
                 assertThat().
+                body("data", hasSize(10)).
                 body("data[1].rawUtcOffsetHours", equalTo(-10));
     }
 }
